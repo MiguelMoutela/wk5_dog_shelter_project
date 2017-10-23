@@ -1,4 +1,4 @@
-require_relative('../db/SqlRunner.sql')
+require_relative('../db/SqlRunner.rb')
 
 class Dog
 
@@ -8,12 +8,12 @@ class Dog
   def initialize(options)
 
   @id = options['id'].to_i
-  @name = name
-  @city = city
-  @breed = breed
-  @admission_date = admission_date
-  @adopted_on = adopted_on
-  @adopted_by = adopted_by
+  @name = options['name']
+  @city = options['city']
+  @breed = ['breed']
+  @admission_date = ['admission_date']
+  @adopted_on = ['adopted_on']
+  @adopted_by = ['adopted_by']
   @healthy = false
   @trained = false
   @adoptable = false

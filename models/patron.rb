@@ -6,11 +6,11 @@ class Patron
 
   def initialize(options)
 
-    @name = name
-    @address = address
-    @email = email
-    @phone = phone
-    @bio = bio
+    @name = options['name']
+    @address = options['address']
+    @email = options['email']
+    @phone = options['phone']
+    @bio = options['bio']
 
   end
 
