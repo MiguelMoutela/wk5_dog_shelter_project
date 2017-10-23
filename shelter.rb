@@ -1,26 +1,21 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require('./models/dog.rb')
-require('./models/patron.rb')
+require_relative('./controllers/dogs_controller.rb')
+require('./controllers/patrons_controllers.rb')
 
-get '/dogs' do
+get '/' do
   @dogs = Dog.all
-  erb(:index1)
+  erb(:"dogs/index")
 end
 
-get '/patrons' do
-  @patrons = Patron.all
-  erb(:index2)
-end
-
-get '/students/new' do
-  @houses = House.all
-  erb(:new)
-end
-
-post '/students' do
-  student = Student.new(params)
-  student.save
-
-  redirect to '/students'
-end
+# get '/students/new' do
+#   @houses = House.all
+#   erb(:new)
+# end
+#
+# post '/students' do
+#   student = Student.new(params)
+#   student.save
+#
+#   redirect to '/students'
+# end
