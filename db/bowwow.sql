@@ -20,5 +20,5 @@ CREATE TABLE dogs(
   trained BOOLEAN,
   adoptable BOOLEAN,
   adopted_on DATE,
-  adopted_by INT2 REFERENCES owners (id) ON DELETE CASCADE
+  adopted_by INT2 REFERENCES patrons (id) ON DELETE CASCADE
 );
