@@ -2,10 +2,11 @@ require_relative('../db/SqlRunner.rb')
 
 class Patron
 
+  attr_reader(:id)
   attr_accessor(:name, :address, :email, :phone, :bio)
 
   def initialize(options)
-
+    @id = options['id'].to_i if options['id'] != nil
     @name = options['name']
     @address = options['address']
     @email = options['email']
@@ -17,7 +18,7 @@ class Patron
   def save()
     sql = "INSERT INTO patrons(
     name,
-    adress,
+    address,
     email,
     phone,
     bio
@@ -25,8 +26,8 @@ class Patron
     VALUES(
       $1, $2, $3, $4, $5
     )
-    RETURNING .*"
-    values = [@name, @adress, @email, @phone, @bio]
+    RETURNING *"
+    values = [@name, @address, @email, @phone, @bio]
     result = SqlRunner.run( sql, values )
     @id = result.first()['id'].to_i
   end
@@ -35,7 +36,7 @@ class Patron
     sql = "UPDATE patrons
            SET(
              name,
-             adress,
+             address,
              email,
              phone,
              bio
@@ -43,7 +44,7 @@ class Patron
             ( $1, $2, $3, $4, $5
             )
             WHERE id = $6"
-    values = [@name, @adress, @email, @phone, @bio]
+    values = [@name, @address, @email, @phone, @bio]
     SqlRunner.run( sql, values )
   end
 
@@ -57,7 +58,9 @@ class Patron
   def self.all()
     sql = "SELECT * FROM patrons"
     values = []
-    SqlRunner.run( sql, values )
+    owners = SqlRunner.run( sql, values )
+    result = owners.map {|owner| Patron.new(owner)}
+    return result
   end
 
   def self.find( id )

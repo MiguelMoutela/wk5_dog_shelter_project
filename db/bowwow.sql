@@ -16,9 +16,9 @@ CREATE TABLE dogs(
   city VARCHAR(255),
   breed VARCHAR(255),
   admission_date DATE,
-  healthy BOOLEAN,
-  trained BOOLEAN,
-  adoptable BOOLEAN,
+  healthy BOOLEAN DEFAULT false,
+  trained BOOLEAN DEFAULT false,
+  adoptable BOOLEAN DEFAULT false,
   adopted_on DATE,
   adopted_by INT2 REFERENCES patrons (id) ON DELETE CASCADE
 );

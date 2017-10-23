@@ -7,17 +7,16 @@ class Dog
 
   def initialize(options)
 
-  @id = options['id'].to_i
-  @name = options['name']
-  @city = options['city']
-  @breed = ['breed']
-  @admission_date = ['admission_date']
-  @adopted_on = ['adopted_on']
-  @adopted_by = ['adopted_by']
-  @healthy = false
-  @trained = false
-  @adoptable = false
-
+    @id = options['id'].to_i if options['id'] != nil
+    @name = options['name']
+    @city = options['city']
+    @breed = options['breed']
+    @admission_date = options['admission_date']
+    @adopted_on = options['adopted_on']
+    @adopted_by = options['adopted_by']
+    @healthy = options['healthy']
+    @trained = options['trained']
+    @adoptable = options['adoptable']
   end
 
   def save()
@@ -30,7 +29,7 @@ class Dog
     VALUES(
       $1, $2, $3, $4
     )
-    RETURNING .*"
+    RETURNING *"
     values = [@name, @city, @breed, @admission_date]
     result = SqlRunner.run( sql, values )
     @id = result.first()['id'].to_i
@@ -61,7 +60,9 @@ class Dog
   def self.all()
     sql = "SELECT * FROM dogs"
     values = []
-    SqlRunner.run( sql, values )
+    dogs = SqlRunner.run( sql, values )
+    result = dogs.map {|dog| Dog.new(dog)}
+    return result
   end
 
   def self.find( id )
