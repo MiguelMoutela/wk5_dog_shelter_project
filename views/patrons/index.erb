@@ -1,0 +1,31 @@
+<h1>Patrons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Address</th>
+    <th></th>
+    <th>Email</th>
+    <th></th>
+    <th>Phone</th>
+    <th></th>
+    <th>Bio</th>
+    <th></th>
+  </tr>
+
+  <% for patron in @patrons %>
+  <tr>
+    <td><%= patron.name %></td>
+    <td>|</td>
+    <td><%= patron.address %></td>
+    <td>|</td>
+    <td><%= patron.email %></td>
+    <td>|</td>
+    <td><%= patron.phone %></td>
+    <td>|</td>
+    <td><%= patron.bio %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table
