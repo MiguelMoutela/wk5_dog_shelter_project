@@ -16,7 +16,7 @@
 
   <% for patron in @patrons %>
   <tr>
-    <td><%= patron.name %></td>
+    <td><a href= "patrons/<%= patron.id %> "><%= patron.name %></td>
     <td>|</td>
     <td><%= patron.address %></td>
     <td>|</td>

@@ -2,7 +2,7 @@ require_relative( '../models/patron.rb' )
 
 get '/patrons' do
   @patrons = Patron.all()
-  erb ( :"patrons/index_all" )
+  erb ( :"patrons/index" )
 end
 
 get '/patrons/new' do
@@ -12,7 +12,7 @@ get '/patrons/new' do
 end
 
 post '/patrons' do
-  patron = Patron.new(params)
+  patron = Patron.new( params )
   patron.save()
 end
 

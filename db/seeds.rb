@@ -4,7 +4,7 @@ require_relative('../models/patron.rb')
 
 Patron_1 = Patron.new({
   'name' => 'Dog lover',
-  'city' => 'house number, street, city, postcode',
+  'address' => 'house number, street, city, postcode',
   'email' => 'that email@address.com',
   'phone' => 'that phone number',
   'bio' => 'nice guy, nice house'
@@ -14,7 +14,7 @@ Patron_1 = Patron.new({
 
 Patron_2 = Patron.new({
   'name' => 'Also a Dog lover',
-  'city' => 'house number, street, city, postcode',
+  'address' => 'house number, street, city, postcode',
   'email' => 'that email@address.com',
   'phone' => 'that phone number',
   'bio' => 'also a nice guy with a nice house'
