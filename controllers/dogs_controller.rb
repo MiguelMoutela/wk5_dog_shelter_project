@@ -17,6 +17,34 @@ get '/bowwows/adoptable' do
   erb(:"dogs/index_all")
 end
 
+post '/bowwows/search' do
+  adoptable = params["adoptable"]
+  healthy = params["healthy"]
+  trained = params["trained"]
+
+  if adoptable == "on"
+    adoptable = true
+  else
+    adoptable = false
+  end
+
+  if trained == "on"
+    trained = true
+  else
+    trained = false
+  end
+
+  if healthy == "on"
+    healthy = true
+  else
+    healthy = false
+  end
+
+  @dogs = Dog.search(adoptable, trained, healthy)
+
+  erb(:"dogs/index_sum")
+end
+
 get '/bowwows/healthy' do
   @all_dogs = Dog.all
   @dogs = @all_dogs.find_all {|dog| dog.healthy() == 't' }
@@ -32,4 +60,9 @@ end
 post '/bowwows' do
   dog = Dog.new(params)
   dog.save()
+end
+
+get '/bowwows/:id' do
+  @dog = Dog.find( params[:id].to_i )
+  erb(:"dogs/show")
 end

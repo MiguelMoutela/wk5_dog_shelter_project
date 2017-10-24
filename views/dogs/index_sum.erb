@@ -19,4 +19,26 @@
     <td>|</td>
   </tr>
   <% end %>
-</table
+</table>
+
+
+<form action="/bowwows/search" method="post">
+
+  <label class="switch">
+    Healthy:
+    <input type="checkbox" name="healthy">
+  </label>
+
+  <label class="switch">
+    Trained:
+    <input type="checkbox" name="trained">
+  </label>
+
+  <label class="switch">
+    Adoptable:
+    <input type="checkbox" name="adoptable">
+  </label>
+
+  <input type="submit" value="Search" />
+
+</form> 

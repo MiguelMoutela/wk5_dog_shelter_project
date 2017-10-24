@@ -15,3 +15,8 @@ post '/patrons' do
   patron = Patron.new(params)
   patron.save()
 end
+
+get '/patrons/:id' do
+  @patron = Patron.find( params[:id].to_i )
+  erb(:"dogs/index_all")
+end

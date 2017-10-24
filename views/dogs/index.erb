@@ -1,0 +1,49 @@
+<h1>Bowwows</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>City</th>
+    <th></th>
+    <th>Breed</th>
+    <th></th>
+    <th>Admission_date</th>
+    <th></th>
+    <th>Healthy</th>
+    <th></th>
+    <th>Trained</th>
+    <th></th>
+    <th>Adoptable</th>
+    <th></th>
+    <th>Adopted on</th>
+    <th></th>
+    <th>Adopted by</th>
+    <th></th>
+  </tr>
+  <% dog in @dogs %>
+    <tr>
+      <td><%= dog.name %></td>
+      <td>|</td>
+      <td><%= dog.city %></td>
+      <td>|</td>
+      <td><%= dog.breed %></td>
+      <td>|</td>
+      <td><%= dog.admission_date %></td>
+      <td>|</td>
+      <td><%= dog.healthy %></td>
+      <td>|</td>
+      <td><%= dog.trained %></td>
+      <td>|</td>
+      <td><%= dog.adoptable %></td>
+      <td>|</td>
+      <td><%= dog.adopted_on %></td>
+      <td>|</td>
+      <td><%= dog.adopted_by %></td>
+      <td>|</td>
+    </tr>
+  <% end %>  
+</table>
+
+<br />
+<br />

@@ -3,7 +3,7 @@ require_relative('../db/SqlRunner.rb')
 class Dog
 
   attr_reader(:name, :city, :breed, :admission_date, :adopted_on, :adopted_by)
-  attr_accessor(:healthy, :trained, :adoptable)
+  attr_accessor(:healthy, :trained, :adoptable, :id)
 
   def initialize(options)
 
@@ -17,6 +17,19 @@ class Dog
     @healthy = options['healthy']
     @trained = options['trained']
     @adoptable = options['adoptable']
+  end
+
+  def self.search(adoptable, healthy, trained)
+    sql = "SELECT * FROM dogs
+    WHERE adoptable = $1
+    AND healthy = $2
+    AND trained = $3"
+
+    values = [adoptable, healthy, trained]
+
+    results = SqlRunner.run(sql, values)
+
+    return results.map {|dog| Dog.new(dog)}
   end
 
   def save()
@@ -83,7 +96,7 @@ class Dog
       sql = "SELECT * FROM patrons WHERE id = $1"
 
       values = [@adopted_by]
-      owner = SQLRunner.run(sql, values)[0]
+      owner = SqlRunner.run(sql, values)[0]
       result = Owner.new(owner)
       return result
   end

@@ -21,26 +21,28 @@
     <th>Adopted by</th>
     <th></th>
   </tr>
-  <% for dog in @dogs %>
+  
   <tr>
-    <td><%= dog.name %></td>
+    <td><%= @dog.name %></td>
     <td>|</td>
-    <td><%= dog.city %></td>
+    <td><%= @dog.city %></td>
     <td>|</td>
-    <td><%= dog.breed %></td>
+    <td><%= @dog.breed %></td>
     <td>|</td>
-    <td><%= dog.admission_date %></td>
+    <td><%= @dog.admission_date %></td>
     <td>|</td>
-    <td><%= dog.healthy %></td>
+    <td><%= @dog.healthy %></td>
     <td>|</td>
-    <td><%= dog.trained %></td>
+    <td><%= @dog.trained %></td>
     <td>|</td>
-    <td><%= dog.adoptable %></td>
+    <td><%= @dog.adoptable %></td>
     <td>|</td>
-    <td><%= dog.adopted_on %></td>
+    <td><%= @dog.adopted_on %></td>
     <td>|</td>
-    <td><%= dog.adopted_by %></td>
+    <td><%= @dog.adopted_by %></td>
     <td>|</td>
   </tr>
-  <% end %>
-</table
+</table>
+
+<br />
+<br />
