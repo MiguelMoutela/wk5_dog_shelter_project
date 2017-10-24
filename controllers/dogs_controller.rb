@@ -68,13 +68,21 @@ get '/bowwows/:id' do
 end
 
 post '/bowwows/:id/delete' do
-@dog = Dog.delete(params[:id].to_i)
-erb(:"dogs/terminate")
-redirect '/bowwows'
+  @dog = Dog.delete(params[:id].to_i)
+  erb(:"dogs/terminate")
+  redirect '/bowwows'
 end
 
 get '/bowwows/:id/update' do
-@dog = Dog.find(params[:id].to_i)
-@patrons = Patron.all
-erb(:"dogs/update")
+  @dog = Dog.find(params[:id].to_i)
+  @patrons = Patron.all
+  erb(:"dogs/update")
+end
+
+post '/bowwows/:id/update' do
+  @dog = Dog.find(params[:id].to_i)
+  @patrons = Patron.all
+  dog = Patron.new(params)
+  dog.save()
+  erb(:"dogs/update")
 end

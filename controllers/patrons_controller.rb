@@ -27,8 +27,14 @@ post '/patrons/:id/delete' do
   redirect '/patrons'
 end
 
-get '/pizzas/:id/update' do
-  @pizza = Pizza.find(params[:id].to_i)
-  erb(:update)
-  # @pizza.update()
+get '/patrons/:id/update' do
+  @patron = Patron.find(params[:id].to_i)
+  erb(:"patrons/update")
+end
+
+post '/patrons/:id/update' do
+  @patron = Patron.find(params[:id].to_i)
+  erb(:"patrons/update")
+  patron = Patron.new(params)
+  patron.save()
 end
