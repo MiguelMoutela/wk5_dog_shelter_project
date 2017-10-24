@@ -41,12 +41,18 @@ class Dog
              name,
              city,
              breed,
-             admission_date
+             admission_date,
+             adopted_on,
+             adopted_by,
+             healthy,
+             trained,
+             adoptable
              ) =
-            ( $1, $2, $3, $4
+            ( $1, $2, $3, $4, $5, $6, $7, $8, $9
             )
-            WHERE id = $5"
-    values = [@name, @city, @breed, @admission_date]
+            WHERE id = $10"
+    values = [@name, @city, @breed, @admission_date, @adopted_on, @adopted_by,
+             @healthy, @trained, @adoptable, @id]
     SqlRunner.run( sql, values )
   end
 

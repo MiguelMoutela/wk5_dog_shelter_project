@@ -1,8 +1,17 @@
-require( 'sinatra' )
-require( 'sinatra/contrib/all' )
 require_relative( '../models/patron.rb' )
 
 get '/patrons' do
   @patrons = Patron.all()
-  erb ( :"patrons/index" )
+  erb ( :"patrons/index_all" )
+end
+
+get '/patrons/new' do
+  # @houses = House.all
+  # I want to use scroll downs for cities and breeds
+  erb( :"patrons/new" )
+end
+
+post '/patrons' do
+  patron = Patron.new(params)
+  patron.save()
 end

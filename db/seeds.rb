@@ -42,6 +42,11 @@ Dog_2 = Dog.new({
 
 Dog_2.save()
 
+Dog_2.adoptable='t'
+Dog_2.healthy='t'
+Dog_2.trained='t'
+
+Dog_2.update()
 
 binding.pry
 nil

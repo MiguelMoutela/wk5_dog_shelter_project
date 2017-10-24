@@ -1,0 +1,22 @@
+<h1>Bowwows</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>City</th>
+    <th></th>
+    <th>Breed</th>
+    <th></th>
+  </tr>
+  <% for dog in @dogs %>
+  <tr>
+    <td><%= dog.name %></td>
+    <td>|</td>
+    <td><%= dog.city %></td>
+    <td>|</td>
+    <td><%= dog.breed %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table

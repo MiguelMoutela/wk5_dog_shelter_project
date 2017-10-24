@@ -1,0 +1,29 @@
+
+<!-- <div class='field'>
+  <label for='age'>Age:</label>
+  <input type='number' name='age'/>
+</div> -->
+
+<!-- <div class='field'>
+  <label for='breed'>Breed:</label>
+  <select id='breed' name='house_id'>
+    <% @houses.each do |house| %>
+
+        <option value="<%= house.id %>"><%= house.name %></option>
+
+    <% end %>
+  </select>
+</div>
+ -->
+
+
+ <!-- <div class='field'>
+   <label for='house'>House:</label>
+   <select id='houses' name='house_id'>
+     <% @houses.each do |house| %>
+
+         <option value="<%= house.id %>"><%= house.name %></option>
+
+     <% end %>
+   </select>
+ </div> -->
