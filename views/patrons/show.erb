@@ -26,4 +26,8 @@
     <td><%= @patron.bio %></td>
     <td>|</td>
   </tr>
-</table
+</table>
+
+<form action='/patrons/<%= @patron.id %>/delete' method='post'>
+  <input type='submit' value='Delete' class="btn btn-green btn-block"/>
+</form>

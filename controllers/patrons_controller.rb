@@ -23,7 +23,7 @@ end
 
 post '/patrons/:id/delete' do
   @patron = Patron.delete(params[:id].to_i)
-  erb(:destroy)
+  erb(:"patrons/terminate")
   redirect '/patrons'
 end
 
