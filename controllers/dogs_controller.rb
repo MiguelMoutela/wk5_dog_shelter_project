@@ -67,9 +67,9 @@ get '/bowwows/:id' do
   erb(:"dogs/show")
 end
 
-post '/dogs/:id/delete' do
+post '/bowwows/:id/delete' do
 @dog = Dog.delete(params[:id].to_i)
-erb(:"dogs/destroy")
+erb(:"dogs/terminate")
 redirect '/bowwows'
 end
 

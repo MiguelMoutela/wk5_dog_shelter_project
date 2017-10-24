@@ -70,7 +70,7 @@ class Dog
   end
 
   def self.delete( id )
-    sql = "DELETE * FROM dogs
+    sql = "DELETE FROM dogs
           WHERE id = $1"
     values = [id]
     SqlRunner.run( sql, values )

@@ -49,7 +49,7 @@ class Patron
   end
 
   def self.delete( id )
-    sql = "DELETE * FROM patrons
+    sql = "DELETE FROM patrons
           WHERE id = $1"
     values = [id]
     SqlRunner.run( sql, values )

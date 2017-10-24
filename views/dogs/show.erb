@@ -21,7 +21,7 @@
     <th>Adopted by</th>
     <th></th>
   </tr>
-  
+
   <tr>
     <td><%= @dog.name %></td>
     <td>|</td>
@@ -44,5 +44,6 @@
   </tr>
 </table>
 
-<br />
-<br />
+  <form action='/bowwows/<%= @dog.id %>/delete' method='post'>
+    <input type='submit' value='Delete' class="btn btn-green btn-block"/>
+  </form>
