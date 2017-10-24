@@ -18,5 +18,5 @@ end
 
 get '/patrons/:id' do
   @patron = Patron.find( params[:id].to_i )
-  erb(:"dogs/index_all")
+  erb(:"patrons/show")
 end
