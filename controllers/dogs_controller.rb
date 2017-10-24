@@ -66,3 +66,15 @@ get '/bowwows/:id' do
   @dog = Dog.find( params[:id].to_i )
   erb(:"dogs/show")
 end
+
+post '/dogs/:id/delete' do
+@dog = Dog.delete(params[:id].to_i)
+erb(:"dogs/destroy")
+redirect '/bowwows'
+end
+
+get '/pizzas/:id/update' do
+@pizza = Pizza.find(params[:id].to_i)
+erb(:update)
+# @pizza.update()
+end

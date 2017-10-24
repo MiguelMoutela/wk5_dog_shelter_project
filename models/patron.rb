@@ -75,7 +75,7 @@ class Patron
       sql = "SELECT * FROM dogs WHERE id = $1"
 
       values = [id]
-      dogs = SQLRunner.run(sql, values)
+      dogs = SqlRunner.run(sql, values)
       result = dogs.map {|dog| Dog.new(dog)}
       return result
   end

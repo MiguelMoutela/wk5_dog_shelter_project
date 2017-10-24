@@ -20,3 +20,15 @@ get '/patrons/:id' do
   @patron = Patron.find( params[:id].to_i )
   erb(:"patrons/show")
 end
+
+post '/patrons/:id/delete' do
+  @patron = Patron.delete(params[:id].to_i)
+  erb(:destroy)
+  redirect '/patrons'
+end
+
+get '/pizzas/:id/update' do
+  @pizza = Pizza.find(params[:id].to_i)
+  erb(:update)
+  # @pizza.update()
+end
