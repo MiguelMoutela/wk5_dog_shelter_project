@@ -73,8 +73,8 @@ erb(:"dogs/terminate")
 redirect '/bowwows'
 end
 
-get '/pizzas/:id/update' do
-@pizza = Pizza.find(params[:id].to_i)
-erb(:update)
-# @pizza.update()
+get '/bowwows/:id/update' do
+@dog = Dog.find(params[:id].to_i)
+@patrons = Patron.all
+erb(:"dogs/update")
 end
