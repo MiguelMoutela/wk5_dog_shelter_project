@@ -6,9 +6,13 @@ get '/bowwows' do
 end
 
 get '/bowwows/new' do
-  # @houses = House.all
-  # I want to use scroll downs for cities and breeds
   erb( :"dogs/new" )
+end
+
+post '/bowwows' do
+  dog = Dog.new(params)
+  dog.save()
+  redirect to "/bowwows"
 end
 
 get '/bowwows/adoptable' do
@@ -45,23 +49,6 @@ post '/bowwows/search' do
   erb(:"dogs/index_sum")
 end
 
-get '/bowwows/healthy' do
-  @all_dogs = Dog.all
-  @dogs = @all_dogs.find_all {|dog| dog.healthy() == 't' }
-  erb(:"dogs/index_all")
-end
-
-get '/bowwows/trained' do
-  @all_dogs = Dog.all
-  @dogs = @all_dogs.find_all {|dog| dog.trained() == 't' }
-  erb(:"dogs/index_all")
-end
-
-post '/bowwows' do
-  dog = Dog.new(params)
-  dog.save()
-end
-
 get '/bowwows/:id' do
   @dog = Dog.find( params[:id].to_i )
   erb(:"dogs/show")
@@ -79,10 +66,38 @@ get '/bowwows/:id/update' do
   erb(:"dogs/update")
 end
 
-post '/bowwows/:id/update' do
-  @dog = Dog.find(params[:id].to_i)
-  @patrons = Patron.all
-  dog = Patron.new(params)
-  dog.save()
-  erb(:"dogs/update")
+post '/bowwows/:id' do
+  @dog = Dog.new(params)
+  @dog.update()
+  # @dog = Dog.find(params[:id].to_i)
+  # @patrons = Patron.all
+  # dog = Patron.new(params)
+  # dog.save()
+  redirect to "/bowwows/#{params[:id]}"
 end
+
+# database
+# get /bowwows should show all bowwows
+# post/bowwows should create new bowwwo
+# get /bowwows/1 should bowwow for id 1
+# post/put /bowwows/1 should update bowwow with id 1
+
+# delete /bowwwos/1
+# post /bowwwos/1/delete
+
+# html routes
+# get /bowwows/create show show create page for bowwow
+# get /bowwows/1/edit should show an update form for bowwow id 1
+
+
+# get '/bowwows/healthy' do
+#   @all_dogs = Dog.all
+#   @dogs = @all_dogs.find_all {|dog| dog.healthy() == 't' }
+#   erb(:"dogs/index_all")
+# end
+#
+# get '/bowwows/trained' do
+#   @all_dogs = Dog.all
+#   @dogs = @all_dogs.find_all {|dog| dog.trained() == 't' }
+#   erb(:"dogs/index_all")
+# end

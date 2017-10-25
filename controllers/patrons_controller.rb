@@ -6,8 +6,6 @@ get '/patrons' do
 end
 
 get '/patrons/new' do
-  # @houses = House.all
-  # I want to use scroll downs for cities and breeds
   erb( :"patrons/new" )
 end
 

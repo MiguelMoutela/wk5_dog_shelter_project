@@ -44,6 +44,10 @@
   </tr>
 </table>
 
+  <% if @dog.adopted_by != nil %>
+    <a href="/patrons/<%=  @dog.adopted_by %>">See owner</a>
+  <% end %>
+
   <form action='/bowwows/<%= @dog.id %>/delete' method='post'>
     <input type='submit' value='Delete' class="btn btn-green btn-block"/>
   </form>

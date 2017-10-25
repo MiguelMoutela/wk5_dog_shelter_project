@@ -4,7 +4,7 @@
       <h1>Update Bowwow</h1>
     </div>
 
-    <form action='/bowwows/<%= @dog.id%>/update' method='post'>
+    <form action='/bowwows/<%= @dog.id%>' method='post'>
 
       <div class='field'>
         <label for='name'>Name:</label>
@@ -29,27 +29,26 @@
       <div class='field'>
         <label for='healthy'>Healthy:</label>
         <select id='healthy' name='healthy' value='<%= @dog.healthy %>'>
-          <option value='t'>true</option>
-          <option value='f'>false</option>
+          <option value='t' <%= 'selected' if @dog.healthy == 't' %>>true</option>
+          <option value='f' <%= 'selected' if @dog.healthy == 'f' %>>false</option>
         </select>
       </div>
 
       <div class='field'>
         <label for='trained'>Trained:</label>
         <select id='trained' name='trained' value='<%= @dog.trained %>'>
-          <option value='t'>true</option>
-          <option value='f'>false</option>
+          <option value='t' <%= 'selected' if @dog.trained == 't' %>   >true</option>
+          <option value='f' <%= 'selected' if @dog.trained == 'f' %> >false</option>
         </select>
       </div>
 
       <div class='field'>
         <label for='adoptable'>Adoptable:</label>
-        <select id='adoptable' name='adoptable' value='<%= @dog.adoptable %>'>
-          <option value='t'>true</option>
-          <option value='f'>false</option>
+        <select id='adoptable' name='adoptable'>
+          <option value='t' <%= 'selected' if @dog.adoptable == 't' %>>true</option>
+          <option value='f' <%=  'selected' if @dog.adoptable == 'f' %>>false</option>
         </select>
       </div>
-
       <div class='field'>
         <label for="date-field">Adoption Date:</label>
           <input type="date" name="adopted_on" id="date-field" value='<%= @dog.adopted_on %>' />

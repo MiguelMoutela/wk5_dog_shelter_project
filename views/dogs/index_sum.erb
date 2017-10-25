@@ -1,27 +1,5 @@
 <h1>Bowwows</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>City</th>
-    <th></th>
-    <th>Breed</th>
-    <th></th>
-  </tr>
-  <% for dog in @dogs %>
-  <tr>
-    <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
-    <td>|</td>
-    <td><%= dog.city %></td>
-    <td>|</td>
-    <td><%= dog.breed %></td>
-    <td>|</td>
-  </tr>
-  <% end %>
-</table>
-
-
 <form action="/bowwows/search" method="post">
 
   <label class="switch">
@@ -42,3 +20,25 @@
   <input type="submit" value="Search" />
 
 </form> 
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>City</th>
+    <th></th>
+    <th>Breed</th>
+    <th></th>
+  </tr>
+  <% for dog in @dogs %>
+  <tr>
+    <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
+    <td>|</td>
+    <td><%= dog.city %></td>
+    <td>|</td>
+    <td><%= dog.breed %></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>

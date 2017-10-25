@@ -2,8 +2,8 @@ require_relative('../db/SqlRunner.rb')
 
 class Dog
 
-  attr_reader(:name, :city, :breed, :admission_date, :adopted_on, :adopted_by)
-  attr_accessor(:healthy, :trained, :adoptable, :id)
+
+  attr_accessor(:name, :city, :breed, :admission_date, :adopted_on, :adopted_by, :healthy, :trained, :adoptable, :id)
 
   def initialize(options)
 
@@ -14,6 +14,7 @@ class Dog
     @admission_date = options['admission_date']
     @adopted_on = options['adopted_on']
     @adopted_by = options['adopted_by']
+
     @healthy = options['healthy']
     @trained = options['trained']
     @adoptable = options['adoptable']
@@ -64,6 +65,11 @@ class Dog
             ( $1, $2, $3, $4, $5, $6, $7, $8, $9
             )
             WHERE id = $10"
+
+    if(@adopted_on == "")
+      @adopted_on = nil
+    end
+
     values = [@name, @city, @breed, @admission_date, @adopted_on, @adopted_by,
              @healthy, @trained, @adoptable, @id]
     SqlRunner.run( sql, values )
