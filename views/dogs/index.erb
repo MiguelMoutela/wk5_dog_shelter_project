@@ -21,7 +21,7 @@
     <th>Adopted by</th>
     <th></th>
   </tr>
-  <% dog in @dogs %>
+  <% for dog in @dogs %>
     <tr>
       <td><%= dog.name %></td>
       <td>|</td>
@@ -42,7 +42,7 @@
       <td><%= dog.adopted_by %></td>
       <td>|</td>
     </tr>
-  <% end %>  
+  <% end %>
 </table>
 
 <br />

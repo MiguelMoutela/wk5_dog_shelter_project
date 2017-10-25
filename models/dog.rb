@@ -14,7 +14,6 @@ class Dog
     @admission_date = options['admission_date']
     @adopted_on = options['adopted_on']
     @adopted_by = options['adopted_by']
-
     @healthy = options['healthy']
     @trained = options['trained']
     @adoptable = options['adoptable']

@@ -1,4 +1,5 @@
 require_relative( '../models/patron.rb' )
+require_relative( '../models/dog.rb' )
 
 
 get '/patrons' do
@@ -36,4 +37,10 @@ post '/patrons/:id/update' do
   erb(:"patrons/update")
   patron = Patron.new(params)
   patron.save()
+end
+
+get '/patrons/:id/dogs' do
+  @patron = Patron.find(params[:id].to_i)
+  @dogs = @patron.dogs
+  erb(:"dogs/index")
 end
