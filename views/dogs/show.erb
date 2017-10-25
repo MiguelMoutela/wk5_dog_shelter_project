@@ -39,7 +39,8 @@
     <td>|</td>
     <td><%= @dog.adopted_on %></td>
     <td>|</td>
-    <td><%= @dog.adopted_by %></td>
+    <td>
+      <%= @dog.owner.name if @dog.owner != nil %></td>
     <td>|</td>
   </tr>
 </table>

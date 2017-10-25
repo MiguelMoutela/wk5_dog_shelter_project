@@ -70,6 +70,10 @@ class Dog
       @adopted_on = nil
     end
 
+    if(@adopted_by == "")
+      @adopted_by =  nil
+    end
+
     values = [@name, @city, @breed, @admission_date, @adopted_on, @adopted_by,
              @healthy, @trained, @adoptable, @id]
     SqlRunner.run( sql, values )
@@ -102,9 +106,13 @@ class Dog
       sql = "SELECT * FROM patrons WHERE id = $1"
 
       values = [@adopted_by]
-      owner = SqlRunner.run(sql, values)[0]
-      result = Owner.new(owner)
-      return result
+      owner = SqlRunner.run(sql, values).first
+      if(owner == nil)
+        return nil
+      else
+        result = Patron.new(owner)
+        return result
+      end
   end
 
 end

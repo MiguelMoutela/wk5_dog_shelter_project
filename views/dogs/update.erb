@@ -56,7 +56,8 @@
 
       <div class='field'>
         <label for='Owner'>Owner:</label>
-        <select id='owner' name='patron_id'>
+        <select id='owner' name='adopted_by'>
+          <option value=""> No owner </option>
           <% @patrons.each do |patron| %>
               <option value="<%= patron.id %>"><%= patron.name %></option>
           <% end %>
