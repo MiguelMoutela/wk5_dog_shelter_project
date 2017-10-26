@@ -1,0 +1,16 @@
+1 - Felt this was a surprisingly hard week. Even if if is just a pizza shop with some buttons and an extra bit of
+functionality. I was counting on feeling the that it become easier to produce this kind of communication
+with a database but I struggled. For sure we are not getting worse so ey oh, as Darren puts it. Enough complaining
+let me show you my app - a one to many dog shelter.
+
+2 - User needs
+    - Simple to use app; Intuitive user paths that avoid option paralysis.
+    - An app that uses simple english - only international english - no techy jargon
+    - An app that limits user input and user limits user error by making use of scroll down selectors
+    wherever possible.
+    - An app that stores info on owners to increase the chances of the animal's outcome.
+
+3 - Nav bar - you can crud both dogs and owners
+            - add dog = as you can see I can only add match a dog to an existing owner.
+
+            - see 

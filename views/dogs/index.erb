@@ -16,7 +16,7 @@
   </tr>
     <% for dog in @dogs %>
     <tr>
-      <td><%= dog.name %></td>
+      <td><a href="/bowwows/<%= dog.id %>" > <%= dog.name %> </td>
       <td><%= dog.city %></td>
       <td><%= dog.breed %></td>
       <td><%= dog.admission_date %></td>

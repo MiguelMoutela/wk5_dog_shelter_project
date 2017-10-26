@@ -26,10 +26,9 @@
 <div class = "container">
   <div class = "form"
     <form action="/patrons/<%= @patron.id %>/delete" method="post">
-      <input type="submit" value="Delete" class="btn btn-green btn-block"/>
+      <a href="/patrons/<%= @patron.id %>/dogs">See Dogs</a>
+      <a href="/patrons/<%= @patron.id %>/update">Update<a>
+      <input type="submit" value="Delete" class="btn btn-green btn-block"/>  
     </form>
   </div>
-    <a href="/patrons/<%= @patron.id %>/dogs">See Dogs</a>
-
-    <a href="/patrons/<%= @patron.id %>/update">Update<a>
 </div>
