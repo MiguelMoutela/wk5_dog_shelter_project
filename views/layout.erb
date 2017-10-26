@@ -4,22 +4,24 @@
   <head>
     <meta charset="utf-8">
     <title>Bowwows</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css?dkfsh=dkshfskh">
   </head>
   <body>
-    <header><h1><a href=#"top">Bowwow's<a></h1></header>
+    <header><h1><a href="top">Bowwow's<a></h1></header>
     <nav>
-      <a href="/bowwows">See Bowwows</a>
-      <a href="/bowwows/new">Add Bowwow</a>
-      <a href="/patrons">See Patrons</a>
-      <a href="/patrons/new">Add Patron</a>
+      <ul>
+        <li><a href="/bowwows">See Bowwows</a></li>
+        <li><a href="/bowwows/new">Add Bowwow</a></li>
+        <li><a href="/patrons">See Patrons</a></li>
+        <li><a href="/patrons/new">Add Patron</a></li>
+      </ul>
     </nav>
     <main>
       <%=yield%>
     </main>
   </body>
-  <aside>
-    <a href="top">go back to top</a>
+  <footer>
+    <a href="#top">go back to top</a>
     <p>&copy;Miguel Almeida 2017. All rights reserved.</p>
-  </aside>
+  </footer>
 </html>
