@@ -1,37 +1,37 @@
 <div class="container">
   <div class="panel">
     <div class="panel-header">
-      <h1>Update Patron</h1>
+      <h2>Update Patron</h2>
     </div>
 
-    <form action='/patrons/<%= @patron.id%>/update' method='post'>
+    <form action="/patrons/<%= @patron.id%>/update" method="post">
 
-      <div class='field'>
-        <label for='name'>Name:</label>
-        <input type='text' name='name' value='<%= @patron.name %>' />
+      <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= @patron.name %>" />
       </div>
 
-      <div class='field'>
-        <label for='address'>Adress:</label>
-        <input type='text' name='address' value='<%= @patron.address %>' />
+      <div class="field">
+        <label for="address">Adress:</label>
+        <input type="text" name="address" value="<%= @patron.address %>" />
       </div>
 
-      <div class='field'>
-        <label for='email'>Email:</label>
-        <input type='text' name='email' value='<%= @patron.email %>' />
+      <div class="field">
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="<%= @patron.email %>" />
       </div>
 
-      <div class='field'>
-        <label for='phone'>Phone:</label>
-        <input type='text' name='phone' value='<%= @patron.phone %>' />
+      <div class="field">
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" value="<%= @patron.phone %>" />
       </div>
 
-      <div class='field'>
-        <label for='bio'>bio:</label>
-        <input type='text' name='bio' value='<%= @patron.bio %>' />
+      <div class="field">
+        <label for="bio">bio:</label>
+        <input type="text" name="bio" value="<%= @patron.bio %>" />
       </div>
 
-      <input type='submit' value='Update Patron' class="btn btn-green btn-block"/>
+      <input type="submit" value="Update Patron" class="btn btn-green btn-block"/>
     </form>
   </div>
 </div>

@@ -1,62 +1,62 @@
 <div class="container">
   <div class="panel">
     <div class="panel-header">
-      <h1>Update Bowwow</h1>
+      <h2>Update Bowwow</h2>
     </div>
 
-    <form action='/bowwows/<%= @dog.id%>' method='post'>
+    <form action="/bowwows/<%= @dog.id%>" method="post">
 
-      <div class='field'>
-        <label for='name'>Name:</label>
-        <input type='text' name='name' value='<%= @dog.name %>' />
+      <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= @dog.name %>" />
       </div>
 
-      <div class='field'>
-        <label for='city'>City:</label>
-        <input type='text' name='city' value='<%= @dog.city %>' />
+      <div class="field">
+        <label for="city">City:</label>
+        <input type="text" name="city" value="<%= @dog.city %>" />
       </div>
 
-      <div class='field'>
-        <label for='breed'>Breed:</label>
-        <input type='text' name='breed' value='<%= @dog.breed %>' />
+      <div class="field">
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" value="<%= @dog.breed %>" />
       </div>
 
-      <div class='field'>
+      <div class="field">
         <label for="admission_date">Admission Date:</label>
-          <input type="date" name="admission_date" value='<%= @dog.admission_date%>' />
+          <input type="date" name="admission_date" value="<%= @dog.admission_date%>" />
       </div>
 
-      <div class='field'>
-        <label for='healthy'>Healthy:</label>
-        <select id='healthy' name='healthy' value='<%= @dog.healthy %>'>
-          <option value='t' <%= 'selected' if @dog.healthy == 't' %>>true</option>
-          <option value='f' <%= 'selected' if @dog.healthy == 'f' %>>false</option>
+      <div class="field">
+        <label for="healthy">Healthy:</label>
+        <select id="healthy" name="healthy" value="<%= @dog.healthy %>">
+          <option value="t" <%= "selected" if @dog.healthy == "t" %>>true</option>
+          <option value="f" <%= "selected" if @dog.healthy == "f" %>>false</option>
         </select>
       </div>
 
-      <div class='field'>
-        <label for='trained'>Trained:</label>
-        <select id='trained' name='trained' value='<%= @dog.trained %>'>
-          <option value='t' <%= 'selected' if @dog.trained == 't' %>   >true</option>
-          <option value='f' <%= 'selected' if @dog.trained == 'f' %> >false</option>
+      <div class="field">
+        <label for="trained"accesskey="">Trained:</label>
+        <select id="trained" name="trained" value="<%= @dog.trained %>">
+          <option value="t" <%= "selected" if @dog.trained == "t" %>   >true</option>
+          <option value="f" <%= "selected" if @dog.trained == "f" %> >false</option>
         </select>
       </div>
 
-      <div class='field'>
-        <label for='adoptable'>Adoptable:</label>
-        <select id='adoptable' name='adoptable'>
-          <option value='t' <%= 'selected' if @dog.adoptable == 't' %>>true</option>
-          <option value='f' <%=  'selected' if @dog.adoptable == 'f' %>>false</option>
+      <div class="field">
+        <label for="adoptable">Adoptable:</label>
+        <select id="adoptable" name="adoptable">
+          <option value="t" <%= "selected" if @dog.adoptable == "t" %>>true</option>
+          <option value="f" <%= "selected" if @dog.adoptable == "f" %>>false</option>
         </select>
       </div>
-      <div class='field'>
+      <div class="field">
         <label for="date-field">Adoption Date:</label>
-          <input type="date" name="adopted_on" id="date-field" value='<%= @dog.adopted_on %>' />
+          <input type="date" name="adopted_on" id="date-field" value="<%= @dog.adopted_on %>" />
       </div>
 
-      <div class='field'>
-        <label for='Owner'>Owner:</label>
-        <select id='owner' name='adopted_by'>
+      <div class="field">
+        <label for="Owner">Owner:</label>
+        <select id="owner" name="adopted_by">
           <option value=""> No owner </option>
           <% @patrons.each do |patron| %>
               <option value="<%= patron.id %>"><%= patron.name %></option>
@@ -65,7 +65,7 @@
       </div>
 
 
-      <input type='submit' value='Update Bowwow' class="btn btn-green btn-block"/>
+      <input type="submit" value="Update Bowwow" class="btn btn-green btn-block"/>
     </form>
   </div>
 </div>

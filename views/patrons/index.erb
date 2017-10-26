@@ -1,8 +1,8 @@
-<div class = 'panel-header'>
-  <h1>Patrons</h1>
+<div class = "panel-header">
+  <h2>Patrons</h2>
 </div>
-<div class = 'container'>
-  <div class = 'table_header'>
+<div class = "container">
+  <div class = "table_header">
     <table>
       <tr>
         <th>Name</th>
@@ -13,7 +13,7 @@
       </tr>
   </div>
 
-  <div class = 'table_content'>
+  <div class = "table_content">
     <% for patron in @patrons %>
       <tr>
         <td><a href= "patrons/<%= patron.id %> "><%= patron.name %></td>

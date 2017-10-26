@@ -6,6 +6,10 @@ html{
   background-color: rgb(249, 249, 249)
 }
 
+h2{
+  text-align: center;
+}
+
 nav a{
   text-decoration: none;
   color: rgb(74, 77, 66);
@@ -21,9 +25,9 @@ table a{
   color: rgb(74, 77, 66);
 }
 
-table a{
+table a:hover{
   text-decoration: none;
-  color: rgb(74, 77, 66);
+  color: rgb(212, 167, 33);
 }
 
 nav{
@@ -31,6 +35,7 @@ nav{
   border: 2px solid rgb(74, 77, 66);
   padding: 10px;
   margin: 10px;
+  display: flex;
 }
 
 div#box {
@@ -49,6 +54,7 @@ table{
   border: 2px solid rgb(74, 77, 66);
   padding: 10px;
   margin: 10px;
+  display: flex;
 }
 
 .table-index{
