@@ -6,6 +6,11 @@ html{
   background-color: rgb(249, 249, 249)
 }
 
+/*a{
+  text-decoration: none;
+  color: rgb(74, 77, 66);
+}*/
+
 h2{
   text-align: center;
 }
@@ -16,7 +21,7 @@ nav a{
 }
 
 nav a:hover{
-  text-decoration: none
+  text-decoration: none;
   color: rgb(212, 167, 33);
 }
 
@@ -64,16 +69,22 @@ table{
   margin: 10px;
 }
 
-.form{
+form{
   border-radius: 10px;
   border: 2px solid rgb(74, 77, 66);
   padding: 10px;
   margin: 10px;
 }
 
-.form-index{
+/*.form-index{
   border-radius: 10px;
   border: 2px solid rgb(74, 77, 66);
   padding: 10px;
   margin: 10px;
+}*/
+
+aside{
+  text-decoration: none;
+  color: rgb(74, 77, 66);
+  text-align: center;
 }

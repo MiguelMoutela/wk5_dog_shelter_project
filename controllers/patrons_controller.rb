@@ -32,11 +32,10 @@ get '/patrons/:id/update' do
   erb(:"patrons/update")
 end
 
-post '/patrons/:id/update' do
-  @patron = Patron.find(params[:id].to_i)
+post '/patrons/:id' do
+  @patron = Patron.new(params)
+  @patron.update()
   erb(:"patrons/update")
-  patron = Patron.new(params)
-  patron.save()
 end
 
 get '/patrons/:id/dogs' do
