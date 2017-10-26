@@ -1,34 +1,30 @@
-<h1>Bowwows</h1>
-
-<div class = 'container'>
-  <div class = 'table_header'>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>City</th>
-        <th>Breed</th>
-        <th>Admission_date</th>
-        <th>Healthy</th>
-        <th>Trained</th>
-        <th>Adoptable</th>
-        <th>Adopted on</th>
-        <th>Adopted by</th>
-      </tr>
-    </div>
-    <div class = "table_content"
-      <% for dog in @dogs %>
-        <tr>
-          <td><%= dog.name %></td>
-          <td><%= dog.city %></td>
-          <td><%= dog.breed %></td>
-          <td><%= dog.admission_date %></td>
-          <td><%= dog.healthy %></td>
-          <td><%= dog.trained %></td>
-          <td><%= dog.adoptable %></td>
-          <td><%= dog.adopted_on %></td>
-          <td><%= dog.adopted_by %></td>
-        </tr>
-      <% end %>
-    </table>
-  </div>
+<div class = 'panel-header'>
+  <h1>Bowwows</h1>
 </div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Breed</th>
+    <th>Admission_date</th>
+    <th>Healthy</th>
+    <th>Trained</th>
+    <th>Adoptable</th>
+    <th>Adopted on</th>
+    <th>Adopted by</th>
+  </tr>
+    <% for dog in @dogs %>
+    <tr>
+      <td><%= dog.name %></td>
+      <td><%= dog.city %></td>
+      <td><%= dog.breed %></td>
+      <td><%= dog.admission_date %></td>
+      <td><%= dog.healthy %></td>
+      <td><%= dog.trained %></td>
+      <td><%= dog.adoptable %></td>
+      <td><%= dog.adopted_on %></td>
+      <td><%= dog.adopted_by %></td>
+    </tr>
+  <% end %>
+</table>

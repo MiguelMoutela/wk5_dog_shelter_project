@@ -1,4 +1,6 @@
-<h1>Patrons</h1>
+<div class = 'panel-header'>
+  <h1>Patrons</h1>
+</div>
 <div class = 'container'>
   <div class = 'table_header'>
     <table>
@@ -21,11 +23,13 @@
     </div>
   </table>
 </div>
+<div class = 'container'>
+  <div class = 'form'
+    <form action='/patrons/<%= @patron.id %>/delete' method='post'>
+      <input type='submit' value='Delete' class="btn btn-green btn-block"/>
+    </form>
+  </div>
+    <a href='/patrons/<%= @patron.id %>/dogs'>See Dogs</a>
 
-<form action='/patrons/<%= @patron.id %>/delete' method='post'>
-  <input type='submit' value='Delete' class="btn btn-green btn-block"/>
-</form>
-
-<a href='/patrons/<%= @patron.id %>/dogs'>See Dogs</a>
-
-<a href="/patrons/<%= @patron.id %>/update">Update<a>
+    <a href="/patrons/<%= @patron.id %>/update">Update<a>
+</div>

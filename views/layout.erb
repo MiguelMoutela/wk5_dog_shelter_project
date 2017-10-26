@@ -6,9 +6,15 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <a href="/bowwows">Filter Bowwows</a>
+    <header><h1>Miguel's dogs</h1></header>
     <nav>
-      <%=yield%>
+      <a href="/bowwows">See Bowwows</a>
+      <a href="/bowwows/new">Add Bowwows</a>
+      <a href="/patrons">See Patrons</a>
+      <a href="/patrons/new">Add Patrons</a>
     </nav>
+    <main>
+      <%=yield%>
+    </main>
   </body>
 </html>

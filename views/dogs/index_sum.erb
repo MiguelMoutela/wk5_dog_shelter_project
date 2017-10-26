@@ -1,46 +1,42 @@
-<h1>Bowwows</h1>
-
-<div class = 'form'>
+<div class = 'panel-header'>
+  <h2>Bowwows</h2>
+</div>
+<div id="box">
+<aside class = 'form-index'>
   <form action="/bowwows/search" method="post">
     <div class = 'data_field'>
-      <label class="switch">
-        Healthy:
-        <input type="checkbox" name="healthy">
-      </label>
+      <label class="switch" for="healthy">
+        Healthy:</label>
+        <input type="checkbox" name="healthy" id="healthy">
     </div>
     <div class = 'data_field'>
-      <label class="switch">
-        Trained:
-        <input type="checkbox" name="trained">
-      </label>
+      <label class="switch" for="trained">
+        Trained:</label>
+        <input type="checkbox" name="trained" id="trained">
     </div>
     <div class = 'data_field'>
-      <label class="switch">
-        Adoptable:
-        <input type="checkbox" name="adoptable">
-      </label>
+      <label class="switch" for="adoptable">
+        Adoptable:</label>
+        <input type="checkbox" name="adoptable" id="adoptable">
     </div>
     <input type="submit" value="Search" />
   </form> 
-</div>
+</aside>
 
-<div class = 'container'>
-  <div class = 'table_header'>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>City</th>
-        <th>Breed</th>
-      </tr>
+<article>
+<table class = 'table-index'>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>Breed</th>
+  </tr>
     <% for dog in @dogs %>
-  </div>
-  <div class = 'table_content'>
-    <tr>
-      <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
-      <td><%= dog.city %></td>
-      <td><%= dog.breed %></td>
-    </tr>
+  <tr>
+    <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
+    <td><%= dog.city %></td>
+    <td><%= dog.breed %></td>
+  </tr>
     <% end %>
-    </table>
-  <div>
+</table>
+</article>
 </div>

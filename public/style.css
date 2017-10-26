@@ -1,3 +1,73 @@
 html{
   font-family: helvetica;
+  color: rgb(74, 77, 66);
+  letter-spacing: 1.75px;
+  line-height: 40px;
+  background-color: rgb(249, 249, 249)
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(74, 77, 66);
+}
+
+nav a:hover{
+  text-decoration: none
+  color: rgb(212, 167, 33);
+}
+
+table a{
+  text-decoration: none;
+  color: rgb(74, 77, 66);
+}
+
+table a{
+  text-decoration: none;
+  color: rgb(74, 77, 66);
+}
+
+nav{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
+}
+
+div#box {
+  display: flex;
+}
+
+.panel-header{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
+}
+
+table{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
+}
+
+.table-index{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
+}
+
+.form{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-index{
+  border-radius: 10px;
+  border: 2px solid rgb(74, 77, 66);
+  padding: 10px;
+  margin: 10px;
 }
