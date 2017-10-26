@@ -1,32 +1,26 @@
 <h1>Patrons</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Address</th>
-    <th></th>
-    <th>Email</th>
-    <th></th>
-    <th>Phone</th>
-    <th></th>
-    <th>Bio</th>
-    <th></th>
-  </tr>
-
-  <tr>
-    <td><%= @patron.name %></td>
-    <td>|</td>
-    <td><%= @patron.address %></td>
-    <td>|</td>
-    <td><%= @patron.email %></td>
-    <td>|</td>
-    <td><%= @patron.phone %></td>
-    <td>|</td>
-    <td><%= @patron.bio %></td>
-    <td>|</td>
-  </tr>
-</table>
+<div class = 'container'>
+  <div class = 'table_header'>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Bio</th>
+      </tr>
+    </div>
+    <div class = 'table_content'>
+      <tr>
+        <td><%= @patron.name %></td>
+        <td><%= @patron.address %></td>
+        <td><%= @patron.email %></td>
+        <td><%= @patron.phone %></td>
+        <td><%= @patron.bio %></td>
+      </tr>
+    </div>
+  </table>
+</div>
 
 <form action='/patrons/<%= @patron.id %>/delete' method='post'>
   <input type='submit' value='Delete' class="btn btn-green btn-block"/>

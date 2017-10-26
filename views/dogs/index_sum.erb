@@ -1,44 +1,46 @@
 <h1>Bowwows</h1>
 
-<form action="/bowwows/search" method="post">
+<div class = 'form'>
+  <form action="/bowwows/search" method="post">
+    <div class = 'data_field'>
+      <label class="switch">
+        Healthy:
+        <input type="checkbox" name="healthy">
+      </label>
+    </div>
+    <div class = 'data_field'>
+      <label class="switch">
+        Trained:
+        <input type="checkbox" name="trained">
+      </label>
+    </div>
+    <div class = 'data_field'>
+      <label class="switch">
+        Adoptable:
+        <input type="checkbox" name="adoptable">
+      </label>
+    </div>
+    <input type="submit" value="Search" />
+  </form> 
+</div>
 
-  <label class="switch">
-    Healthy:
-    <input type="checkbox" name="healthy">
-  </label>
-
-  <label class="switch">
-    Trained:
-    <input type="checkbox" name="trained">
-  </label>
-
-  <label class="switch">
-    Adoptable:
-    <input type="checkbox" name="adoptable">
-  </label>
-
-  <input type="submit" value="Search" />
-
-</form> 
-
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>City</th>
-    <th></th>
-    <th>Breed</th>
-    <th></th>
-  </tr>
-  <% for dog in @dogs %>
-  <tr>
-    <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
-    <td>|</td>
-    <td><%= dog.city %></td>
-    <td>|</td>
-    <td><%= dog.breed %></td>
-    <td>|</td>
-  </tr>
-  <% end %>
-</table>
+<div class = 'container'>
+  <div class = 'table_header'>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Breed</th>
+      </tr>
+    <% for dog in @dogs %>
+  </div>
+  <div class = 'table_content'>
+    <tr>
+      <td><a href="/bowwows/<%= dog.id %>"   > <%= dog.name %> </td>
+      <td><%= dog.city %></td>
+      <td><%= dog.breed %></td>
+    </tr>
+    <% end %>
+    </table>
+  <div>
+</div>
