@@ -10,7 +10,8 @@ let me show you my app - a one to many dog shelter.
     wherever possible.
     - An app that stores info on owners to increase the chances of the animal's outcome.
 
-3 - Nav bar - you can crud both dogs and owners
-            - add dog = as you can see I can only add match a dog to an existing owner.
+3 - Nav bar
 
-            - see 
+4 - Dog with no owner - give it one with lots of dogs. show you can go back and forward.
+
+5 - List - show gross mistake with adoptable 
