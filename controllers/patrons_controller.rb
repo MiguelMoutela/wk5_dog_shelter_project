@@ -35,6 +35,7 @@ end
 post '/patrons/:id' do
   @patron = Patron.new(params)
   @patron.update()
+  redirect '/patrons'
   erb(:"patrons/update")
 end
 

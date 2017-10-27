@@ -4,25 +4,25 @@
       <h2>Update Patron</h2>
     </div>
 
-    <form action="/patrons/<%= @patron.id%>/update" method="post">
+    <form action="/patrons/<%= @patron.id%>" method="post">
 
       <div class="field">
-        <label for="name">Name:</label>
+        <label for="name">name:</label>
         <input type="text" name="name" value="<%= @patron.name %>" />
       </div>
 
       <div class="field">
-        <label for="address">Adress:</label>
+        <label for="address">adress:</label>
         <input type="text" name="address" value="<%= @patron.address %>" />
       </div>
 
       <div class="field">
-        <label for="email">Email:</label>
+        <label for="email">email:</label>
         <input type="text" name="email" value="<%= @patron.email %>" />
       </div>
 
       <div class="field">
-        <label for="phone">Phone:</label>
+        <label for="phone">phone:</label>
         <input type="text" name="phone" value="<%= @patron.phone %>" />
       </div>
 
@@ -31,7 +31,7 @@
         <input type="text" name="bio" value="<%= @patron.bio %>" />
       </div>
 
-      <input type="submit" value="Update Patron" class="btn btn-green btn-block"/>
+      <input type="submit" name=:"" value="Update Patron"/>
     </form>
   </div>
 </div>

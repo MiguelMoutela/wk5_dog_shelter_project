@@ -44,7 +44,7 @@ class Patron
             ( $1, $2, $3, $4, $5
             )
             WHERE id = $6"
-    values = [@name, @address, @email, @phone, @bio]
+    values = [@name, @address, @email, @phone, @bio, @id]
     SqlRunner.run( sql, values )
   end
 
