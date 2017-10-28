@@ -46,7 +46,7 @@ post '/bowwows/search' do
 
   @dogs = Dog.search(adoptable, trained, healthy)
 
-  erb(:"dogs/index_sum")
+  erb(:"dogs/index")
 end
 
 get '/bowwows/:id' do
