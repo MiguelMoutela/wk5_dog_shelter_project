@@ -1,3 +1,18 @@
+You can use Google Slides if you don't have powerpoint/keynote.
+Presentation structure:
+- your planning
+- your experience
+- favourite bits of code / challenges / bugs
+- demo your app
+- questions
+
+If you're unclear about any of that, I'm happy to answer questions.
+
+PS: Those of you that haven't, send us your songs or you will suffer through Peter André or Barbie Girl.
+
+
+
+
 1 - Felt this was a surprisingly hard week. Even if if is just a pizza shop with some buttons and an extra bit of
 functionality. I was counting on feeling the that it become easier to produce this kind of communication
 with a database but I struggled. For sure we are not getting worse so ey oh, as Darren puts it. Enough complaining
@@ -14,4 +29,4 @@ let me show you my app - a one to many dog shelter.
 
 4 - Dog with no owner - give it one with lots of dogs. show you can go back and forward.
 
-5 - List - show gross mistake with adoptable 
+5 - List - show gross mistake with adoptable
