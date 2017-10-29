@@ -24,8 +24,7 @@
     <td><%= @dog.trained %></td>
     <td><%= @dog.adoptable %></td>
     <td><%= @dog.adopted_on %></td>
-    <td>
-      <%= @dog.owner.name if @dog.owner != nil %></td>
+    <td><%= @dog.owner.name if @dog.owner != nil %></td>
   </tr>
 </table>
 <div class = container>

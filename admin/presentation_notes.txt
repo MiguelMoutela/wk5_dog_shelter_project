@@ -1,9 +1,34 @@
 You can use Google Slides if you don't have powerpoint/keynote.
 Presentation structure:
+
 - your planning
+
+1 Planning was mainly done as a group (from my part)
+1a Created some proto personas
+
+. this informed the language - simple, international english
+. it also informed the user paths - intuitive
+. determined that the amount of user input had to be kept to a minimum
+
+1b Created some class diagrams
+
 - your experience
-- favourite bits of code / challenges / bugs
+
+. Felt this was a surprisingly hard week.
+. time management was problem - lack of task planning and daily objectives
+. RFI! - class inheritance vs pizza shop but with dogs!
+. debugging
+
+- favourite bits of code
+
+. disappearing button
+. filter functionality (bug)
+
 - demo your app
+
+.Dog with no owner - give it one with lots of dogs.
+show you can go back and forward.
+
 - questions
 
 If you're unclear about any of that, I'm happy to answer questions.
